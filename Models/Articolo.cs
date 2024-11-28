@@ -31,12 +31,21 @@ namespace applicazione_giornale.Models
 
         public static bool operator ==(Articolo a, Articolo b)
         {
-            return a == b ;
+            if(a.Autore == b.Autore && a.Titolo == b.Titolo)
+            {
+                return true ;
+            }else
+                return false ;
         }
 
         public static bool operator !=(Articolo a, Articolo b)
         {
-            return !(a == b); 
+            if (a.Autore != b.Autore && a.Titolo != b.Titolo)
+            {
+                return true;
+            }
+            else
+                return false;
         }
 
     }
